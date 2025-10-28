@@ -1,32 +1,26 @@
 #include <stdio.h>
 
-int main(){
-	int tuoi;
-    int Giave;
-    int SoTien;
-	
-	printf("Nhap so tuoi :");
-	scanf("%d", &tuoi);
+int main() {
+    int x,sum;
+    printf("Nhap tuoi: ");
+    scanf("%d", &x);
 
-    if (tuoi < 0 || tuoi > 120) {
-        printf("Tuoi khong hop le\n");
-    } 
-    else if (tuoi < 6) {
-        SoTien = 0;
-        printf("SoTien ve : %d VNÐ\n", SoTien);
-    } 
-    else if (tuoi <= 18) {
-        SoTien = GiaVe * 50 / 100;
-        printf("SoTien ve : %d VNÐ\n", SoTien);
-    } 
-    else if (tuoi <= 60) {
-        SoTien = GiaVe;
-        printf("SoTien ve : %d VNÐ\n", SoTien);
-    } 
-    else {
-        SoTien = GiaVe * 70 / 100;
-        printf("SoTien ve : %d VNÐ\n", SoTien);
+
+    if(x>0 && x<6){
+        sum = 20000*0;
+        printf("So tien phai tra: %d VND",sum);
+    }else if(x>=6 && x<18){
+        sum = 20000*0.5;
+        printf("So tien phai tra: %d VND",sum);
+    }else if(x>=18& x<60){
+        sum = 20000*1;
+        printf("So tien phai tra: %d VND",sum);
+    }else if(x>=60){
+        sum = 20000*0.7;
+        printf("So tien phai tra: %d VND",sum);
+    }else{
+        printf("So tuoi khong hop le.");
     }
-
-    return 0;
-}
+    
+   return 0;
+   }
